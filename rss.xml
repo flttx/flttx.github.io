@@ -1,17 +1,22 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://flttx.github.io</id>
-    <title>Flttx&#39;s Blog</title>
-    <link href="https://flttx.github.io">
-    <updated>2020-08-03T07:54:31.000Z</updated>
-    <category term="react">
-    <category term="微信小程序">
-    <category term="H5 APP">
-    <entry>
-        <id>https://flttx.github.io/2020/08/03/React知识点/</id>
-        <title>React知识点</title>
-        <link rel="alternate" href="https://flttx.github.io/2020/08/03/React知识点/">
-        <content type="html">&lt;h1 id=&#34;1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;#&lt;/a&gt; 1. React 生命周期有哪些，16 版本生命周期发生了哪些变化？&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title>Flttx&#39;s Blog</title>
+        <link>https://flttx.github.io
+        <description></description>
+        <language></language>
+        <pubdate>Mon, 03 Aug 2020 15:54:31 +0800</pubdate>
+        <lastbuilddate>Mon, 03 Aug 2020 15:54:31 +0800</lastbuilddate>
+        <category>react</category>
+        <category>微信小程序</category>
+        <category>H5 APP</category>
+        <item>
+            <guid ispermalink="true">https://flttx.github.io/2020/08/03/React知识点/</guid>
+            <title>React知识点</title>
+            <link>https://flttx.github.io/2020/08/03/React知识点/
+            <category>react</category>
+            <pubdate>Mon, 03 Aug 2020 15:54:31 +0800</pubdate>
+            <description><!--[CDATA[ &lt;h1 id=&#34;1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;#&lt;/a&gt; 1. React 生命周期有哪些，16 版本生命周期发生了哪些变化？&lt;/h1&gt;
 &lt;h2 id=&#34;15生命周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#15生命周期&#34;&gt;#&lt;/a&gt; 15 生命周期&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;初始化阶段
@@ -155,29 +160,29 @@ React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲�
 &lt;li&gt;使用函数代替 class&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;相比函数，编写一个 class 可能需要掌握更多的知识，需要注意的点也越多，比如 this 指向、绑定事件等等。另外，计算机理解一个 class 比理解一个函数更快。Hooks 让你可以在 classes 之外使用更多 React 的新特性。&lt;/p&gt;
-</content>
-        <category term="react">
-        <updated>2020-08-03T07:54:31.000Z</updated>
-    </category></entry>
-    <entry>
-        <id>https://flttx.github.io/2020/08/03/4-0-技巧/</id>
-        <title>Antv G2 4.0+技巧</title>
-        <link rel="alternate" href="https://flttx.github.io/2020/08/03/4-0-技巧/">
-        <content type="html">&lt;p&gt;AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==&#34;&gt;https://antv.vision/zh。&lt;/span&gt;&lt;/p&gt;
+ ]]--></description>
+        </item>
+        <item>
+            <guid ispermalink="true">https://flttx.github.io/2020/08/03/4-0-技巧/</guid>
+            <title>Antv G2 4.0+技巧</title>
+            <link>https://flttx.github.io/2020/08/03/4-0-技巧/
+            <category>react</category>
+            <pubdate>Mon, 03 Aug 2020 15:45:38 +0800</pubdate>
+            <description><!--[CDATA[ &lt;p&gt;AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==&#34;&gt;https://antv.vision/zh。&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;G2 一套面向常规统计图表，以数据驱动的高交互可视化图形语法，具有高度的易用性和扩展性。使用 G2，你可以无需关注图表各种繁琐的实现细节，一条语句即可使用 Canvas 或 SVG 构建出各种各样的可交互的统计图表。网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==&#34;&gt;https://g2.antv.vision/zh。&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;1-设置图例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-设置图例&#34;&gt;#&lt;/a&gt; 1. 设置图例&lt;/h1&gt;
 &lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;legend(&amp;#123; position: &amp;apos;top-left&amp;apos;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       offsetX: 200,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       itemName: &amp;#123;  //设置图例文本&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         style: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           fontSize: 14,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           fill: &amp;apos;#5F717D&amp;apos;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           x: 22,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       marker: &amp;#123;  //设置图例标注样式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         style: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           r: 6,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;具体 style 属性参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aC9kb2NzL2FwaS9pbnRlcmZhY2VzL3NoYXBlbWFya2VyYXR0cnMlRTMlODAlODI=&#34;&gt;https://g2.antv.vision/zh/docs/api/interfaces/shapemarkerattrs。&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;2-自定义图例点击事件隐藏对应图形&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-自定义图例点击事件隐藏对应图形&#34;&gt;#&lt;/a&gt; 2. 自定义图例点击事件，隐藏对应图形&lt;/h1&gt;
-&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chartRef.current.on(&amp;apos;legend:click&amp;apos;, (ev: any) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const &amp;#123; unchecked, value &amp;#125; = ev.target.cfg.delegateObject.item;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const geoms = chartRef.current.geometries;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for (let i = 0; i &amp;lt; geoms.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        const geom = geoms[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        if (geom.getYScale().field === value) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            if (!unchecked) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.show();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.hide();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="react">
-        <updated>2020-08-03T07:45:38.000Z</updated>
-    </category></entry>
-    <entry>
-        <id>https://flttx.github.io/2019/08/15/手机端调用百度图片识别API/</id>
-        <title>手机端调用百度图片识别API</title>
-        <link rel="alternate" href="https://flttx.github.io/2019/08/15/手机端调用百度图片识别API/">
-        <content type="html">&lt;p&gt;因为业务需求，有车牌识别的功能，所以上网找了图片识别的解决方案，发现 BAT 都有，但是百度的免费次数最多，对业务来说就相当于全免费了，所以就选择了百度的 API，😄。官方文档地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9haS5iYWlkdS5jb20vZG9jcyMvT0NSLUFQSS90b3AlRTMlODAlODI=&#34;&gt;https://ai.baidu.com/docs#/OCR-API/top。&lt;/span&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chartRef.current.on(&amp;apos;legend:click&amp;apos;, (ev: any) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const &amp;#123; unchecked, value &amp;#125; = ev.target.cfg.delegateObject.item;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const geoms = chartRef.current.geometries;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for (let i = 0; i &amp;lt; geoms.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        const geom = geoms[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        if (geom.getYScale().field === value) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            if (!unchecked) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.show();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.hide();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]--></description>
+        </item>
+        <item>
+            <guid ispermalink="true">https://flttx.github.io/2019/08/15/手机端调用百度图片识别API/</guid>
+            <title>手机端调用百度图片识别API</title>
+            <link>https://flttx.github.io/2019/08/15/手机端调用百度图片识别API/
+            <category>H5 APP</category>
+            <pubdate>Thu, 15 Aug 2019 10:09:02 +0800</pubdate>
+            <description><!--[CDATA[ &lt;p&gt;因为业务需求，有车牌识别的功能，所以上网找了图片识别的解决方案，发现 BAT 都有，但是百度的免费次数最多，对业务来说就相当于全免费了，所以就选择了百度的 API，😄。官方文档地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9haS5iYWlkdS5jb20vZG9jcyMvT0NSLUFQSS90b3AlRTMlODAlODI=&#34;&gt;https://ai.baidu.com/docs#/OCR-API/top。&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;1拍照获取图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1拍照获取图片&#34;&gt;#&lt;/a&gt; 1. 拍照获取图片&lt;/h1&gt;
 &lt;p&gt;项目是 H5 APP，拍照用了 H5 + 的 api。&lt;/p&gt;
 &lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//拍照&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;captureImage() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    let _this = this;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    var cmr = plus.camera.getCamera();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    var res = cmr.supportedImageResolutions[0];  //摄像头支持的拍照分辨率&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    var fmt = cmr.supportedImageFormats[0]; //摄像头支持的拍照文件格式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    cmr.captureImage((path)=&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            _this.convertUrl(path);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        function(error) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            console.log(&amp;quot;Capture image failed: &amp;quot; + error.message);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;, &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            resolution: res,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            format: fmt&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    );&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -193,15 +198,15 @@ React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲�
 &lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//识别中...调用文字识别API,传入图片数据参数&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;function recognition(access_token, imgData, callback) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	let params = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		access_token: access_token,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		image: imgData&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	let header = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;apos;Content-Type&amp;apos;: &amp;apos;application/x-www-form-urlencoded&amp;apos;  //请求头设置成固定值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	network.request(&amp;apos;https://aip.baidubce.com/rest/2.0/ocr/v1/license_plate&amp;apos;, params, header, &amp;quot;POST&amp;quot;, res =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		callback(res);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;, err =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		uni.showToast(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			title: &amp;quot;请对准车牌重新拍照&amp;quot;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;			icon: &amp;quot;none&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;		&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;	&amp;#125;, &amp;quot;识别中...&amp;quot;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;只要参数都没有问题，那么接下来就能得到返回结果，返回车牌信息（车牌号、车牌颜色等等）。&lt;br&gt;
 调用其他场景的图片识别 API 同理。&lt;/p&gt;
-</content>
-        <category term="H5 APP">
-        <updated>2019-08-15T02:09:02.000Z</updated>
-    </category></entry>
-    <entry>
-        <id>https://flttx.github.io/2019/07/16/微信小程序省市区三级联动优化版/</id>
-        <title>微信小程序省市区三级联动优化版</title>
-        <link rel="alternate" href="https://flttx.github.io/2019/07/16/微信小程序省市区三级联动优化版/">
-        <content type="html">&lt;p&gt;优化版的省市区选择器，更简化的 Js 数据，方便输出以及读取显示。js 地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLW9jZWFuLm9zcy1jbi1zaGFuZ2hhaS5hbGl5dW5jcy5jb20vcG9zdC9qcy9jaXR5RGF0YS5qcw==&#34;&gt;城市数据 js&lt;/span&gt;。&lt;/p&gt;
+ ]]--></description>
+        </item>
+        <item>
+            <guid ispermalink="true">https://flttx.github.io/2019/07/16/微信小程序省市区三级联动优化版/</guid>
+            <title>微信小程序省市区三级联动优化版</title>
+            <link>https://flttx.github.io/2019/07/16/微信小程序省市区三级联动优化版/
+            <category>微信小程序</category>
+            <pubdate>Tue, 16 Jul 2019 14:22:24 +0800</pubdate>
+            <description><!--[CDATA[ &lt;p&gt;优化版的省市区选择器，更简化的 Js 数据，方便输出以及读取显示。js 地址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLW9jZWFuLm9zcy1jbi1zaGFuZ2hhaS5hbGl5dW5jcy5jb20vcG9zdC9qcy9jaXR5RGF0YS5qcw==&#34;&gt;城市数据 js&lt;/span&gt;。&lt;/p&gt;
 &lt;p&gt;页面组件：&lt;/p&gt;
 &lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&amp;lt;picker mode=&amp;quot;multiSelector&amp;quot; bindchange=&amp;quot;bindMultiPickerChange&amp;quot; bindcolumnchange=&amp;quot;bindMultiPickerColumnChange&amp;quot; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;value=&amp;quot;&amp;#123;&amp;#123;citiesIndex&amp;#125;&amp;#125;&amp;quot; range=&amp;quot;&amp;#123;&amp;#123;cityArray&amp;#125;&amp;#125;&amp;quot; range-key=&amp;quot;name&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;lt;/picker&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;js 优化后无需放服务器请求，放本地即可。&lt;/p&gt;
@@ -221,15 +226,15 @@ React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲�
 &lt;hr&gt;
 &lt;h2 id=&#34;效果&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果&#34;&gt;#&lt;/a&gt; 效果：&lt;/h2&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/post/1558583329%281%29.png&#34; alt=&#34;image.png&#34;&gt;&lt;/p&gt;
-</content>
-        <category term="微信小程序">
-        <updated>2019-07-16T06:22:24.000Z</updated>
-    </category></entry>
-    <entry>
-        <id>https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/</id>
-        <title>微信小程序长按数量自动加减</title>
-        <link rel="alternate" href="https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/">
-        <content type="html">&lt;p&gt;开发一个微信小程序，有购物车的功能，在测试加减购物车中商品数量时，发现点一下加一或减一太烦，于是添加了长按自动加减的功能。&lt;/p&gt;
+ ]]--></description>
+        </item>
+        <item>
+            <guid ispermalink="true">https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/</guid>
+            <title>微信小程序长按数量自动加减</title>
+            <link>https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/
+            <category>微信小程序</category>
+            <pubdate>Tue, 28 May 2019 16:18:29 +0800</pubdate>
+            <description><!--[CDATA[ &lt;p&gt;开发一个微信小程序，有购物车的功能，在测试加减购物车中商品数量时，发现点一下加一或减一太烦，于是添加了长按自动加减的功能。&lt;/p&gt;
 &lt;p&gt;页面组件&lt;/p&gt;
 &lt;figure class=&#34;highlight html&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;minus&#34;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;catchtouchstart&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#39;startMinus&#39;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;catchtouchend&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#39;endMinus&#39;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;data-index&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;&amp;#123;&amp;#123;index&amp;#125;&amp;#125;&#34;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;data-goodIndex&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;&amp;#123;&amp;#123;goodIndex&amp;#125;&amp;#125;&#34;&lt;/span&gt;&amp;gt;&lt;/span&gt;-&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;text&lt;/span&gt;&amp;gt;&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;&amp;#123;good.num&amp;#125;&amp;#125;     &lt;span class=&#34;comment&#34;&gt;&amp;lt;!-- 商品数量 --&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;class&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;add&#34;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;catchtouchstart&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#39;startAdd&#39;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;catchtouchend&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#39;endAdd&#39;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;data-index&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;&amp;#123;&amp;#123;index&amp;#125;&amp;#125;&#34;&lt;/span&gt; &lt;span class=&#34;attr&#34;&gt;data-goodIndex&lt;/span&gt;=&lt;span class=&#34;string&#34;&gt;&#34;&amp;#123;&amp;#123;goodIndex&amp;#125;&amp;#125;&#34;&lt;/span&gt;&amp;gt;&lt;/span&gt;+&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;text&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;1监听触摸开始事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1监听触摸开始事件&#34;&gt;#&lt;/a&gt; 1. 监听触摸开始事件&lt;/h3&gt;
@@ -244,8 +249,7 @@ React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲�
 &lt;p&gt;减号同理，需要注意数量减到 0 时的操作，我的逻辑是长按数量减到一就停止，再点击减号则删除该商品。&lt;/p&gt;
 &lt;h3 id=&#34;效果图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#效果图&#34;&gt;#&lt;/a&gt; 效果图&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/post/pj1sd-gfr7w.gif&#34; alt=&#34;效果图&#34;&gt;&lt;/p&gt;
-</content>
-        <category term="微信小程序">
-        <updated>2019-05-28T08:18:29.000Z</updated>
-    </category></entry>
-</category></category></category></feed>
+ ]]--></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://flttx.github.io</id>
+    <title>Flttx&#39;s Blog • Posts by &#34;react&#34; tag</title>
+    <link href="https://flttx.github.io">
+    <updated>2020-08-03T07:54:31.000Z</updated>
+    <category term="react">
+    <category term="微信小程序">
+    <category term="H5 APP">
+    <entry>
+        <id>https://flttx.github.io/2020/08/03/React知识点/</id>
+        <title>React知识点</title>
+        <link rel="alternate" href="https://flttx.github.io/2020/08/03/React知识点/">
+        <content type="html">&lt;h1 id=&#34;1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-react生命周期有哪些16版本生命周期发生了哪些变化&#34;&gt;#&lt;/a&gt; 1. React 生命周期有哪些，16 版本生命周期发生了哪些变化？&lt;/h1&gt;
+&lt;h2 id=&#34;15生命周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#15生命周期&#34;&gt;#&lt;/a&gt; 15 生命周期&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化阶段
+&lt;ul&gt;
+&lt;li&gt;constructor 构造函数&lt;/li&gt;
+&lt;li&gt;getDefaultPropsprops 默认值&lt;/li&gt;
+&lt;li&gt;getInitialStatestate 默认值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;挂载阶段
+&lt;ul&gt;
+&lt;li&gt;componentWillMount 组件初始化渲染前调用&lt;/li&gt;
+&lt;li&gt;render 组件渲染&lt;/li&gt;
+&lt;li&gt;componentDidMount 组件挂载到 DOM 后调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;更新阶段
+&lt;ul&gt;
+&lt;li&gt;componentWillReceiveProps 组件将要接收新 props 前调用&lt;/li&gt;
+&lt;li&gt;shouldComponentUpdate 组件是否需要更新&lt;/li&gt;
+&lt;li&gt;componentWillUpdate 组件更新前调用&lt;/li&gt;
+&lt;li&gt;render 组件渲染&lt;/li&gt;
+&lt;li&gt;componentDidUpdate 组件更新后调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;卸载阶段
+&lt;ul&gt;
+&lt;li&gt;componentWillUnmount 组件卸载前调用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;16生命周期&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#16生命周期&#34;&gt;#&lt;/a&gt; 16 生命周期&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;初始化阶段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;constructor 构造函数&lt;/li&gt;
+&lt;li&gt;getDefaultPropsprops 默认值&lt;/li&gt;
+&lt;li&gt;getInitialStatestate 默认值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;挂载阶段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;static getDerivedStateFromProps(props,state)&lt;/li&gt;
+&lt;li&gt;render&lt;/li&gt;
+&lt;li&gt;componentDidMount&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;getDerivedStateFromProps：组件每次被 rerender 的时候，包括在组件构建之后 (虚拟 dom 之后，实际 dom 挂载之前)，每次获取新的 props 或 state 之后；每次接收新的 props 之后都会返回一个对象作为新的 state，返回 null 则说明不需要更新 state；配合 componentDidUpdate，可以覆盖 componentWillReceiveProps 的所有用法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更新阶段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;static getDerivedStateFromProps(props,state)&lt;/li&gt;
+&lt;li&gt;shouldComponentUpdate&lt;/li&gt;
+&lt;li&gt;render&lt;/li&gt;
+&lt;li&gt;getSnapshotBeforeUpdate(prevProps,prevState)&lt;/li&gt;
+&lt;li&gt;componentDidUpdate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;getSnapshotBeforeUpdate：触发时间: update 发生的时候，在 render 之后，在组件 dom 渲染之前；返回一个值，作为 componentDidUpdate 的第三个参数；配合 componentDidUpdate, 可以覆盖 componentWillUpdate 的所有用法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;卸载阶段&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;componentWillUnmount&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;错误处理&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;componentDidCatch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;React16 新的生命周期弃用了 componentWillMount、componentWillReceivePorps，componentWillUpdate 新增了 getDerivedStateFromProps、getSnapshotBeforeUpdate 来代替弃用的三个钩子函数。&lt;/p&gt;
+&lt;p&gt;React16 并没有删除这三个钩子函数，但是不能和新增的钩子函数混用， React17 将会删除这三个钩子函数，新增了对错误的处理（ componentDidCatch）。&lt;/p&gt;
+&lt;h2 id=&#34;2-setstate是同步的还是异步的&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-setstate是同步的还是异步的&#34;&gt;#&lt;/a&gt; 2. setState 是同步的还是异步的？&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;生命周期和合成事件中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在 React 的生命周期和合成事件中， React 仍然处于他的更新机制中，这时无论调用多少次 setState，都会不会立即执行更新，而是将要更新的・存入 _pendingStateQueue，将要更新的组件存入 dirtyComponent。&lt;br&gt;
+当上一次更新机制执行完毕，以生命周期为例，所有组件，即最顶层组件 didmount 后会将批处理标志设置为 false。这时将取出 dirtyComponent 中的组件以及 _pendingStateQueue 中的 state 进行更新。这样就可以确保组件不会被重新渲染多次。&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;componentDidMount() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;this.setState(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      index: this.state.index + 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;console.log(&amp;apos;state&amp;apos;, this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;所以，如上面的代码，当我们在执行 setState 后立即去获取 state，这时是获取不到更新后的 state 的，因为处于 React 的批处理机制中， state 被暂存起来，待批处理机制完成之后，统一进行更新。&lt;br&gt;
+所以。setState 本身并不是异步的，而是 React 的批处理机制给人一种异步的假象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;异步代码和原生事件中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;componentDidMount() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    setTimeout(() =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      console.log(&amp;apos;调用setState&amp;apos;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        this.setState(&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            index: this.state.index + 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        console.log(&amp;apos;state&amp;apos;, this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;, 0);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如上面的代码，当我们在异步代码中调用 setState 时，根据 JavaScript 的异步机制，会将异步代码先暂存，等所有同步代码执行完毕后在执行，这时 React 的批处理机制已经走完，处理标志设被设置为 false，这时再调用 setState 即可立即执行更新，拿到更新后的结果。&lt;br&gt;
+在原生事件中调用 setState 并不会出发 React 的批处理机制，所以立即能拿到最新结果。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最佳实践&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;setState 的第二个参数接收一个函数，该函数会在 React 的批处理机制完成之后调用，所以你想在调用 setState 后立即获取更新后的值，请在该回调函数中获取。&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;this.setState(&amp;#123; index: this.state.index + 1 &amp;#125;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      console.log(this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpnMk5EQXpNakU1TlE9PSZhbXA7bWlkPTIyNDc0ODM5ODkmYW1wO2lkeD0xJmFtcDtzbj1kNzhmODg5YzZlMWQ3ZDU3MDU4YzljMjMyYjFhNjIwZSZhbXA7Y2hrc209Y2U2ZWM2ZjlmOTE5NGZlZjY4MWM3OWVlODY5YmY1OGQ1NDEzMTMyYzczNDk2NzEwYjJlYjMyYzg1OWEyMjQ5YTg5NWMyY2U4YTdjZCZhbXA7c2NlbmU9MjEjd2VjaGF0X3JlZGlyZWN0&#34;&gt;由实际问题探究 setState 的执行机制&lt;/span&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;3-为什么有时连续多次setstate只有一次生效&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#3-为什么有时连续多次setstate只有一次生效&#34;&gt;#&lt;/a&gt; 3. 为什么有时连续多次 setState 只有一次生效？&lt;/h1&gt;
+&lt;p&gt;例如下面的代码，两次打印出的结果是相同的：&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;componentDidMount() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    this.setState(&amp;#123; index: this.state.index + 1 &amp;#125;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        console.log(this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    this.setState(&amp;#123; index: this.state.index + 1 &amp;#125;, () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        console.log(this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;原因就是 React 会批处理机制中存储的多个 setState 进行合并，来看下 React 源码中的 _assign 函数，类似于 Object 的 assign：&lt;br&gt;
+如果传入的是对象，很明显会被合并成一次，所以上面的代码两次打印的结果是相同的：&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;Object.assign( &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  nextState,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;index: state.index+ 1&amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#123;index: state.index+ 1&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;注意， assign 函数中对函数做了特殊处理，处理第一个参数传入的是函数，函数的参数 preState 是前一次合并后的结果，所以计算结果是准确的：&lt;/p&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;componentDidMount() &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    this.setState((state, props) =&amp;gt; (&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            index: state.index + 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;), () =&amp;gt; &amp;#123; &lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        console.log(this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    this.setState((state, props) =&amp;gt; (&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            index: state.index + 1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;), () =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        console.log(this.state.index);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;所以上面的代码两次打印的结果是不同的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最佳实践&lt;br&gt;
+ React 会对多次连续的 setState 进行合并，如果你想立即使用上次 setState 后的结果进行下一次 setState，可以让 setState 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;4-虚拟dom比普通dom更快吗&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#4-虚拟dom比普通dom更快吗&#34;&gt;#&lt;/a&gt; 4. 虚拟 Dom 比普通 Dom 更快吗？&lt;/h1&gt;
+&lt;p&gt;很多文章说 VitrualDom 可以提升性能，这一说法实际上是很片面的。&lt;br&gt;
+直接操作 DOM 是非常耗费性能的，这一点毋庸置疑。但是 React 使用 VitrualDom 也是无法避免操作 DOM 的。&lt;br&gt;
+如果是首次渲染， VitrualDom 不具有任何优势，甚至它要进行更多的计算，消耗更多的内存。&lt;br&gt;
+VitrualDom 的优势在于 React 的 Diff 算法和批处理策略， React 在页面更新之前，提前计算好了如何进行更新和渲染 DOM。实际上，这个计算过程我们在直接操作 DOM 时，也是可以自己判断和实现的，但是一定会耗费非常多的精力和时间，而且往往我们自己做的是不如 React 好的。所以，在这个过程中 React 帮助我们 &amp;quot;提升了性能&amp;quot;。&lt;br&gt;
+所以，我更倾向于说， VitrualDom 帮助我们提高了开发效率，在重复渲染时它帮助我们计算如何更高效的更新，而不是它比 DOM 操作更快。&lt;/p&gt;
+&lt;h1 id=&#34;5-为什么代码中一定要引入react&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#5-为什么代码中一定要引入react&#34;&gt;#&lt;/a&gt; 5. 为什么代码中一定要引入 React？&lt;/h1&gt;
+&lt;p&gt;JSX 只是为 React.createElement (component,props,…children) 方法提供的语法糖。&lt;br&gt;
+所有的 JSX 代码最后都会转换成 React.createElement (…)， Babel 帮助我们完成了这个转换的过程。&lt;br&gt;
+所以使用了 JSX 的代码都必须引入 React。&lt;/p&gt;
+&lt;h1 id=&#34;6-为什么react组件首字母必须大写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#6-为什么react组件首字母必须大写&#34;&gt;#&lt;/a&gt; 6. 为什么 React 组件首字母必须大写？&lt;/h1&gt;
+&lt;p&gt;babel 在编译时会判断 JSX 中组件的首字母，当首字母为小写时，其被认定为原生 DOM 标签， createElement 的第一个变量被编译为字符串；当首字母为大写时，其被认定为自定义组件， createElement 的第一个变量被编译为对象。&lt;/p&gt;
+&lt;h1 id=&#34;7-react在渲染真实dom时做了哪些性能优化&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#7-react在渲染真实dom时做了哪些性能优化&#34;&gt;#&lt;/a&gt; 7. React 在渲染真实 Dom 时做了哪些性能优化？&lt;/h1&gt;
+&lt;p&gt;在 IE（8-11）和 Edge 浏览器中，一个一个插入无子孙的节点，效率要远高于插入一整个序列化完整的节点树。&lt;br&gt;
+React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲染节点，而在其他浏览器中则首先将整个大的 DOM 结构构建好，然后再整体插入容器。&lt;br&gt;
+并且，在单独渲染节点时， React 还考虑了 fragment 等特殊节点，这些节点则不会一个一个插入渲染。&lt;/p&gt;
+&lt;h1 id=&#34;8-hook有哪些优势&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#8-hook有哪些优势&#34;&gt;#&lt;/a&gt; 8. Hook 有哪些优势？&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;减少状态逻辑复用的风险&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hook 和 Mixin 在用法上有一定的相似之处，但是 Mixin 引入的逻辑和状态是可以相互覆盖的，而多个 Hook 之间互不影响，这让我们不需要在把一部分精力放在防止避免逻辑复用的冲突上。在不遵守约定的情况下使用 HOC 也有可能带来一定冲突，比如 props 覆盖等等，使用 Hook 则可以避免这些问题。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;避免地狱式嵌套&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;大量使用 HOC 的情况下让我们的代码变得嵌套层级非常深，使用 HOC，我们可以实现扁平式的状态逻辑复用，而避免了大量的组件嵌套。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让组件更容易理解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在使用 class 组件构建我们的程序时，他们各自拥有自己的状态，业务逻辑的复杂使这些组件变得越来越庞大，各个生命周期中会调用越来越多的逻辑，越来越难以维护。使用 Hook，可以让你更大限度的将公用逻辑抽离，将一个组件分割成更小的函数，而不是强制基于生命周期方法进行分割。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用函数代替 class&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相比函数，编写一个 class 可能需要掌握更多的知识，需要注意的点也越多，比如 this 指向、绑定事件等等。另外，计算机理解一个 class 比理解一个函数更快。Hooks 让你可以在 classes 之外使用更多 React 的新特性。&lt;/p&gt;
+</content>
+        <category term="react">
+        <updated>2020-08-03T07:54:31.000Z</updated>
+    </category></entry>
+    <entry>
+        <id>https://flttx.github.io/2020/08/03/4-0-技巧/</id>
+        <title>Antv G2 4.0+技巧</title>
+        <link rel="alternate" href="https://flttx.github.io/2020/08/03/4-0-技巧/">
+        <content type="html">&lt;p&gt;AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==&#34;&gt;https://antv.vision/zh。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;G2 一套面向常规统计图表，以数据驱动的高交互可视化图形语法，具有高度的易用性和扩展性。使用 G2，你可以无需关注图表各种繁琐的实现细节，一条语句即可使用 Canvas 或 SVG 构建出各种各样的可交互的统计图表。网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==&#34;&gt;https://g2.antv.vision/zh。&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;1-设置图例&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-设置图例&#34;&gt;#&lt;/a&gt; 1. 设置图例&lt;/h1&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;legend(&amp;#123; position: &amp;apos;top-left&amp;apos;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       offsetX: 200,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       itemName: &amp;#123;  //设置图例文本&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         style: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           fontSize: 14,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           fill: &amp;apos;#5F717D&amp;apos;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           x: 22,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       marker: &amp;#123;  //设置图例标注样式&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         style: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;           r: 6,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;         &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &amp;#125;,&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;   &amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;具体 style 属性参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aC9kb2NzL2FwaS9pbnRlcmZhY2VzL3NoYXBlbWFya2VyYXR0cnMlRTMlODAlODI=&#34;&gt;https://g2.antv.vision/zh/docs/api/interfaces/shapemarkerattrs。&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;2-自定义图例点击事件隐藏对应图形&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#2-自定义图例点击事件隐藏对应图形&#34;&gt;#&lt;/a&gt; 2. 自定义图例点击事件，隐藏对应图形&lt;/h1&gt;
+&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;chartRef.current.on(&amp;apos;legend:click&amp;apos;, (ev: any) =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const &amp;#123; unchecked, value &amp;#125; = ev.target.cfg.delegateObject.item;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    const geoms = chartRef.current.geometries;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    for (let i = 0; i &amp;lt; geoms.length; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        const geom = geoms[i];&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        if (geom.getYScale().field === value) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            if (!unchecked) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.show();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125; else &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;                geom.hide();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;            &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="react">
+        <updated>2020-08-03T07:45:38.000Z</updated>
+    </category></entry>
+</category></category></category></feed>
