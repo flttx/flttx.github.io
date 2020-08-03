@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    
+    Flttx&#39;s Blog</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="jumbotron">
+  <div class="video">
+    
+      <div class="video-frame">
+        <img src="/images/ocean/overlay-hero.png" alt="Decorative image frame">
+      </div>
+    
+    <div class="video-media">
+      <video playsinline autoplay loop muted data-autoplay poster="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/ocean.png" x5-video-player-type="h5">
+        <source src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/ocean.mp4" type="video/mp4">
+        <source src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/ocean.ogv" type="video/ogg">
+        <source src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/ocean.webm" type="video/webm">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <div class="video-inner text-center text-white">
+      <h1><a href="/">Flttx&#39;s Blog</a></h1>
+      <p></p>
+      <div><img src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/hexo-inverted.svg" class="brand" alt="Flttx&#39;s Blog"></div>
+    </div>
+    <div class="video-learn-more">
+      <a class="anchor" href="#landingpage"><i class="fe fe-mouse"></i></a>
+    </div>
+  </div>
+</section>
+
+<div id="landingpage">
+  <section class="outer">
+  <article class="articles">
+    
+    <h1 class="page-type-title"></h1>
+
+    
+      
+        <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-React知识点" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/03/React知识点/">React知识点</a>
+    </h2>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2020/08/03/React知识点/" class="article-date">
+  <time datetime="2020-08-03T07:54:31.000Z" itemprop="datePublished">2020-08-03</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <h1 id="1-react生命周期有哪些16版本生命周期发生了哪些变化"><a class="markdownIt-Anchor" href="#1-react生命周期有哪些16版本生命周期发生了哪些变化">#</a> 1. React 生命周期有哪些，16 版本生命周期发生了哪些变化？</h1>
+<h2 id="15生命周期"><a class="markdownIt-Anchor" href="#15生命周期">#</a> 15 生命周期</h2>
+<ul>
+<li>初始化阶段
+<ul>
+<li>constructor 构造函数</li>
+<li>getDefaultPropsprops 默认值</li>
+<li>getInitialStatestate 默认值</li>
+</ul>
+</li>
+<li>挂载阶段
+<ul>
+<li>componentWillMount 组件初始化渲染前调用</li>
+<li>render 组件渲染</li>
+<li>componentDidMount 组件挂载到 DOM 后调用</li>
+</ul>
+</li>
+<li>更新阶段
+<ul>
+<li>componentWillReceiveProps 组件将要接收新 props 前调用</li>
+<li>shouldComponentUpdate 组件是否需要更新</li>
+<li>componentWillUpdate 组件更新前调用</li>
+<li>render 组件渲染</li>
+<li>componentDidUpdate 组件更新后调用</li>
+</ul>
+</li>
+<li>卸载阶段
+<ul>
+<li>componentWillUnmount 组件卸载前调用</li>
+</ul>
+</li>
+</ul>
+<h2 id="16生命周期"><a class="markdownIt-Anchor" href="#16生命周期">#</a> 16 生命周期</h2>
+<ul>
+<li>
+<p>初始化阶段</p>
+<ul>
+<li>constructor 构造函数</li>
+<li>getDefaultPropsprops 默认值</li>
+<li>getInitialStatestate 默认值</li>
+</ul>
+</li>
+<li>
+<p>挂载阶段</p>
+<ul>
+<li>static getDerivedStateFromProps(props,state)</li>
+<li>render</li>
+<li>componentDidMount</li>
+</ul>
+<p>getDerivedStateFromProps：组件每次被 rerender 的时候，包括在组件构建之后 (虚拟 dom 之后，实际 dom 挂载之前)，每次获取新的 props 或 state 之后；每次接收新的 props 之后都会返回一个对象作为新的 state，返回 null 则说明不需要更新 state；配合 componentDidUpdate，可以覆盖 componentWillReceiveProps 的所有用法。</p>
+</li>
+<li>
+<p>更新阶段</p>
+<ul>
+<li>static getDerivedStateFromProps(props,state)</li>
+<li>shouldComponentUpdate</li>
+<li>render</li>
+<li>getSnapshotBeforeUpdate(prevProps,prevState)</li>
+<li>componentDidUpdate</li>
+</ul>
+<p>getSnapshotBeforeUpdate：触发时间: update 发生的时候，在 render 之后，在组件 dom 渲染之前；返回一个值，作为 componentDidUpdate 的第三个参数；配合 componentDidUpdate, 可以覆盖 componentWillUpdate 的所有用法。</p>
+</li>
+<li>
+<p>卸载阶段</p>
+<ul>
+<li>componentWillUnmount</li>
+</ul>
+</li>
+<li>
+<p>错误处理</p>
+<ul>
+<li>componentDidCatch</li>
+</ul>
+</li>
+</ul>
+<p>React16 新的生命周期弃用了 componentWillMount、componentWillReceivePorps，componentWillUpdate 新增了 getDerivedStateFromProps、getSnapshotBeforeUpdate 来代替弃用的三个钩子函数。</p>
+<p>React16 并没有删除这三个钩子函数，但是不能和新增的钩子函数混用， React17 将会删除这三个钩子函数，新增了对错误的处理（ componentDidCatch）。</p>
+<h2 id="2-setstate是同步的还是异步的"><a class="markdownIt-Anchor" href="#2-setstate是同步的还是异步的">#</a> 2. setState 是同步的还是异步的？</h2>
+<ul>
+<li>生命周期和合成事件中</li>
+</ul>
+<p>在 React 的生命周期和合成事件中， React 仍然处于他的更新机制中，这时无论调用多少次 setState，都会不会立即执行更新，而是将要更新的・存入 _pendingStateQueue，将要更新的组件存入 dirtyComponent。<br>
+当上一次更新机制执行完毕，以生命周期为例，所有组件，即最顶层组件 didmount 后会将批处理标志设置为 false。这时将取出 dirtyComponent 中的组件以及 _pendingStateQueue 中的 state 进行更新。这样就可以确保组件不会被重新渲染多次。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">this.setState(&#123;</span><br><span class="line">      index: this.state.index + 1</span><br><span class="line">&#125;)</span><br><span class="line">console.log(&apos;state&apos;, this.state.index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以，如上面的代码，当我们在执行 setState 后立即去获取 state，这时是获取不到更新后的 state 的，因为处于 React 的批处理机制中， state 被暂存起来，待批处理机制完成之后，统一进行更新。<br>
+所以。setState 本身并不是异步的，而是 React 的批处理机制给人一种异步的假象。</p>
+<ul>
+<li>异步代码和原生事件中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      console.log(&apos;调用setState&apos;);</span><br><span class="line">        this.setState(&#123;</span><br><span class="line">            index: this.state.index + 1</span><br><span class="line">        &#125;)</span><br><span class="line">        console.log(&apos;state&apos;, this.state.index);</span><br><span class="line">    &#125;, 0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上面的代码，当我们在异步代码中调用 setState 时，根据 JavaScript 的异步机制，会将异步代码先暂存，等所有同步代码执行完毕后在执行，这时 React 的批处理机制已经走完，处理标志设被设置为 false，这时再调用 setState 即可立即执行更新，拿到更新后的结果。<br>
+在原生事件中调用 setState 并不会出发 React 的批处理机制，所以立即能拿到最新结果。</p>
+<ul>
+<li>最佳实践</li>
+</ul>
+<p>setState 的第二个参数接收一个函数，该函数会在 React 的批处理机制完成之后调用，所以你想在调用 setState 后立即获取更新后的值，请在该回调函数中获取。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123; index: this.state.index + 1 &#125;, () =&gt; &#123;</span><br><span class="line">      console.log(this.state.index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>链接：<span class="exturl" data-url="aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpnMk5EQXpNakU1TlE9PSZhbXA7bWlkPTIyNDc0ODM5ODkmYW1wO2lkeD0xJmFtcDtzbj1kNzhmODg5YzZlMWQ3ZDU3MDU4YzljMjMyYjFhNjIwZSZhbXA7Y2hrc209Y2U2ZWM2ZjlmOTE5NGZlZjY4MWM3OWVlODY5YmY1OGQ1NDEzMTMyYzczNDk2NzEwYjJlYjMyYzg1OWEyMjQ5YTg5NWMyY2U4YTdjZCZhbXA7c2NlbmU9MjEjd2VjaGF0X3JlZGlyZWN0">由实际问题探究 setState 的执行机制</span>。</p>
+<h1 id="3-为什么有时连续多次setstate只有一次生效"><a class="markdownIt-Anchor" href="#3-为什么有时连续多次setstate只有一次生效">#</a> 3. 为什么有时连续多次 setState 只有一次生效？</h1>
+<p>例如下面的代码，两次打印出的结果是相同的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    this.setState(&#123; index: this.state.index + 1 &#125;, () =&gt; &#123;</span><br><span class="line">        console.log(this.state.index);</span><br><span class="line">    &#125;)</span><br><span class="line">    this.setState(&#123; index: this.state.index + 1 &#125;, () =&gt; &#123;</span><br><span class="line">        console.log(this.state.index);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原因就是 React 会批处理机制中存储的多个 setState 进行合并，来看下 React 源码中的 _assign 函数，类似于 Object 的 assign：<br>
+如果传入的是对象，很明显会被合并成一次，所以上面的代码两次打印的结果是相同的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Object.assign( </span><br><span class="line">  nextState,</span><br><span class="line">&#123;index: state.index+ 1&#125;,</span><br><span class="line">&#123;index: state.index+ 1&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>注意， assign 函数中对函数做了特殊处理，处理第一个参数传入的是函数，函数的参数 preState 是前一次合并后的结果，所以计算结果是准确的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    this.setState((state, props) =&gt; (&#123;</span><br><span class="line">            index: state.index + 1</span><br><span class="line">    &#125;), () =&gt; &#123; </span><br><span class="line">        console.log(this.state.index);</span><br><span class="line">    &#125;)</span><br><span class="line">    this.setState((state, props) =&gt; (&#123;</span><br><span class="line">            index: state.index + 1</span><br><span class="line">    &#125;), () =&gt; &#123;</span><br><span class="line">        console.log(this.state.index);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以上面的代码两次打印的结果是不同的。</p>
+<ul>
+<li>最佳实践<br>
+ React 会对多次连续的 setState 进行合并，如果你想立即使用上次 setState 后的结果进行下一次 setState，可以让 setState 接收一个函数而不是一个对象。这个函数用上一个 state 作为第一个参数，将此次更新被应用时的 props 做为第二个参数。</li>
+</ul>
+<h1 id="4-虚拟dom比普通dom更快吗"><a class="markdownIt-Anchor" href="#4-虚拟dom比普通dom更快吗">#</a> 4. 虚拟 Dom 比普通 Dom 更快吗？</h1>
+<p>很多文章说 VitrualDom 可以提升性能，这一说法实际上是很片面的。<br>
+直接操作 DOM 是非常耗费性能的，这一点毋庸置疑。但是 React 使用 VitrualDom 也是无法避免操作 DOM 的。<br>
+如果是首次渲染， VitrualDom 不具有任何优势，甚至它要进行更多的计算，消耗更多的内存。<br>
+VitrualDom 的优势在于 React 的 Diff 算法和批处理策略， React 在页面更新之前，提前计算好了如何进行更新和渲染 DOM。实际上，这个计算过程我们在直接操作 DOM 时，也是可以自己判断和实现的，但是一定会耗费非常多的精力和时间，而且往往我们自己做的是不如 React 好的。所以，在这个过程中 React 帮助我们 &quot;提升了性能&quot;。<br>
+所以，我更倾向于说， VitrualDom 帮助我们提高了开发效率，在重复渲染时它帮助我们计算如何更高效的更新，而不是它比 DOM 操作更快。</p>
+<h1 id="5-为什么代码中一定要引入react"><a class="markdownIt-Anchor" href="#5-为什么代码中一定要引入react">#</a> 5. 为什么代码中一定要引入 React？</h1>
+<p>JSX 只是为 React.createElement (component,props,…children) 方法提供的语法糖。<br>
+所有的 JSX 代码最后都会转换成 React.createElement (…)， Babel 帮助我们完成了这个转换的过程。<br>
+所以使用了 JSX 的代码都必须引入 React。</p>
+<h1 id="6-为什么react组件首字母必须大写"><a class="markdownIt-Anchor" href="#6-为什么react组件首字母必须大写">#</a> 6. 为什么 React 组件首字母必须大写？</h1>
+<p>babel 在编译时会判断 JSX 中组件的首字母，当首字母为小写时，其被认定为原生 DOM 标签， createElement 的第一个变量被编译为字符串；当首字母为大写时，其被认定为自定义组件， createElement 的第一个变量被编译为对象。</p>
+<h1 id="7-react在渲染真实dom时做了哪些性能优化"><a class="markdownIt-Anchor" href="#7-react在渲染真实dom时做了哪些性能优化">#</a> 7. React 在渲染真实 Dom 时做了哪些性能优化？</h1>
+<p>在 IE（8-11）和 Edge 浏览器中，一个一个插入无子孙的节点，效率要远高于插入一整个序列化完整的节点树。<br>
+React 通过 lazyTree，在 IE（8-11）和 Edge 中进行单个节点依次渲染节点，而在其他浏览器中则首先将整个大的 DOM 结构构建好，然后再整体插入容器。<br>
+并且，在单独渲染节点时， React 还考虑了 fragment 等特殊节点，这些节点则不会一个一个插入渲染。</p>
+<h1 id="8-hook有哪些优势"><a class="markdownIt-Anchor" href="#8-hook有哪些优势">#</a> 8. Hook 有哪些优势？</h1>
+<ul>
+<li>减少状态逻辑复用的风险</li>
+</ul>
+<p>Hook 和 Mixin 在用法上有一定的相似之处，但是 Mixin 引入的逻辑和状态是可以相互覆盖的，而多个 Hook 之间互不影响，这让我们不需要在把一部分精力放在防止避免逻辑复用的冲突上。在不遵守约定的情况下使用 HOC 也有可能带来一定冲突，比如 props 覆盖等等，使用 Hook 则可以避免这些问题。</p>
+<ul>
+<li>避免地狱式嵌套</li>
+</ul>
+<p>大量使用 HOC 的情况下让我们的代码变得嵌套层级非常深，使用 HOC，我们可以实现扁平式的状态逻辑复用，而避免了大量的组件嵌套。</p>
+<ul>
+<li>让组件更容易理解</li>
+</ul>
+<p>在使用 class 组件构建我们的程序时，他们各自拥有自己的状态，业务逻辑的复杂使这些组件变得越来越庞大，各个生命周期中会调用越来越多的逻辑，越来越难以维护。使用 Hook，可以让你更大限度的将公用逻辑抽离，将一个组件分割成更小的函数，而不是强制基于生命周期方法进行分割。</p>
+<ul>
+<li>使用函数代替 class</li>
+</ul>
+<p>相比函数，编写一个 class 可能需要掌握更多的知识，需要注意的点也越多，比如 this 指向、绑定事件等等。另外，计算机理解一个 class 比理解一个函数更快。Hooks 让你可以在 classes 之外使用更多 React 的新特性。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2020/08/03/React知识点/" data-id="ckdea8yy8000m84vs6xvkchoq" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+        <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-4-0-技巧" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2020/08/03/4-0-技巧/">Antv G2 4.0+技巧</a>
+    </h2>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2020/08/03/4-0-技巧/" class="article-date">
+  <time datetime="2020-08-03T07:45:38.000Z" itemprop="datePublished">2020-08-03</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。网址：<span class="exturl" data-url="aHR0cHM6Ly9hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==">https://antv.vision/zh。</span></p>
+<p>G2 一套面向常规统计图表，以数据驱动的高交互可视化图形语法，具有高度的易用性和扩展性。使用 G2，你可以无需关注图表各种繁琐的实现细节，一条语句即可使用 Canvas 或 SVG 构建出各种各样的可交互的统计图表。网址：<span class="exturl" data-url="aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aCVFMyU4MCU4Mg==">https://g2.antv.vision/zh。</span></p>
+<h1 id="1-设置图例"><a class="markdownIt-Anchor" href="#1-设置图例">#</a> 1. 设置图例</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">legend(&#123; position: &apos;top-left&apos;,</span><br><span class="line">       offsetX: 200,</span><br><span class="line">       itemName: &#123;  //设置图例文本</span><br><span class="line">         style: &#123;</span><br><span class="line">           fontSize: 14,</span><br><span class="line">           fill: &apos;#5F717D&apos;,</span><br><span class="line">           x: 22,</span><br><span class="line">         &#125;,</span><br><span class="line">       &#125;,</span><br><span class="line">       marker: &#123;  //设置图例标注样式</span><br><span class="line">         style: &#123;</span><br><span class="line">           r: 6,</span><br><span class="line">         &#125;,</span><br><span class="line">       &#125;,</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+<p>具体 style 属性参考：<span class="exturl" data-url="aHR0cHM6Ly9nMi5hbnR2LnZpc2lvbi96aC9kb2NzL2FwaS9pbnRlcmZhY2VzL3NoYXBlbWFya2VyYXR0cnMlRTMlODAlODI=">https://g2.antv.vision/zh/docs/api/interfaces/shapemarkerattrs。</span></p>
+<h1 id="2-自定义图例点击事件隐藏对应图形"><a class="markdownIt-Anchor" href="#2-自定义图例点击事件隐藏对应图形">#</a> 2. 自定义图例点击事件，隐藏对应图形</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">chartRef.current.on(&apos;legend:click&apos;, (ev: any) =&gt; &#123;</span><br><span class="line">    const &#123; unchecked, value &#125; = ev.target.cfg.delegateObject.item;</span><br><span class="line">    const geoms = chartRef.current.geometries;</span><br><span class="line">    for (let i = 0; i &lt; geoms.length; i++) &#123;</span><br><span class="line">        const geom = geoms[i];</span><br><span class="line">        if (geom.getYScale().field === value) &#123;</span><br><span class="line">            if (!unchecked) &#123;</span><br><span class="line">                geom.show();</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                geom.hide();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2020/08/03/4-0-技巧/" data-id="ckdea8yx1000084vsmhqwre3c" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+        <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-手机端调用百度图片识别API" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2019/08/15/手机端调用百度图片识别API/">手机端调用百度图片识别API</a>
+    </h2>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/08/15/手机端调用百度图片识别API/" class="article-date">
+  <time datetime="2019-08-15T02:09:02.000Z" itemprop="datePublished">2019-08-15</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>因为业务需求，有车牌识别的功能，所以上网找了图片识别的解决方案，发现 BAT 都有，但是百度的免费次数最多，对业务来说就相当于全免费了，所以就选择了百度的 API，😄。官方文档地址：<span class="exturl" data-url="aHR0cHM6Ly9haS5iYWlkdS5jb20vZG9jcyMvT0NSLUFQSS90b3AlRTMlODAlODI=">https://ai.baidu.com/docs#/OCR-API/top。</span></p>
+<h1 id="1拍照获取图片"><a class="markdownIt-Anchor" href="#1拍照获取图片">#</a> 1. 拍照获取图片</h1>
+<p>项目是 H5 APP，拍照用了 H5 + 的 api。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">//拍照</span><br><span class="line">captureImage() &#123;</span><br><span class="line">    let _this = this;</span><br><span class="line">    var cmr = plus.camera.getCamera();</span><br><span class="line">    var res = cmr.supportedImageResolutions[0];  //摄像头支持的拍照分辨率</span><br><span class="line">    var fmt = cmr.supportedImageFormats[0]; //摄像头支持的拍照文件格式</span><br><span class="line">    cmr.captureImage((path)=&gt; &#123;</span><br><span class="line">            _this.convertUrl(path);</span><br><span class="line">        &#125;,</span><br><span class="line">        function(error) &#123;</span><br><span class="line">            console.log(&quot;Capture image failed: &quot; + error.message);</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            resolution: res,</span><br><span class="line">            format: fmt</span><br><span class="line">        &#125;</span><br><span class="line">    );</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="2图片转base64"><a class="markdownIt-Anchor" href="#2图片转base64">#</a> 2. 图片转 base64</h1>
+<p>根据官方文档，图片要转成 base64 数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">//转换图片路径并调用方法识别</span><br><span class="line">convertUrl(path)&#123;</span><br><span class="line">    let _this = this;</span><br><span class="line">    //转换为本地文件路径</span><br><span class="line">    plus.io.resolveLocalFileSystemURL(path, function(entry) &#123;</span><br><span class="line">        var localurl = entry.toLocalURL(); </span><br><span class="line">        var reader = new plus.io.FileReader();  </span><br><span class="line">        reader.onloadend = function (e) &#123;  </span><br><span class="line">                var imgData = e.target.result.replace(&quot;data:image/jpeg;base64,&quot;, &quot;&quot;).replace(&quot;data:image/png;base64,&quot;, &quot;&quot;);//base64图片  </span><br><span class="line">                ocr.startOCR(imgData, res=&gt;&#123;</span><br><span class="line">                var number = res.words_result.number;</span><br><span class="line">                if(number.length == 7)&#123;</span><br><span class="line">                    uni.showToast(&#123;</span><br><span class="line">                        title: &quot;识别成功&quot;,</span><br><span class="line">                        icon: &quot;none&quot;</span><br><span class="line">                    &#125;)</span><br><span class="line">                    var values = number.split(&quot;&quot;);</span><br><span class="line">                    _this.result = values;</span><br><span class="line">                &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">        &#125;;  </span><br><span class="line">        reader.readAsDataURL(localurl);  </span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="3获取access-token"><a class="markdownIt-Anchor" href="#3获取access-token">#</a> 3. 获取 Access Token</h1>
+<p>好了，现在图片数据有了，在调百度车牌识别 API 之前还要先获取 Access Token, 而要获取 Access Token，又得先登记一个应用，取到应用的 API KEY 和 SECRET KEY。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//获取access_token</span><br><span class="line">function requestAccessToken(callback) &#123;</span><br><span class="line">	let params = &#123;</span><br><span class="line">		grant_type: &apos;client_credentials&apos;,  //固定值</span><br><span class="line">		client_id: api_key,  //登记应用的API KEY</span><br><span class="line">		client_secret: secret_key //登记应用的SECRET KEY</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">    //network是封装的ajax请求函数</span><br><span class="line">	network.request(&apos;https://aip.baidubce.com/oauth/2.0/token&apos;, params, null, &quot;GET&quot;, res =&gt; &#123;</span><br><span class="line">		if (res.hasOwnProperty(&apos;access_token&apos;)) &#123;</span><br><span class="line">			let nowTime = new Date().getTime();  </span><br><span class="line">            //记录当前请求时间是为了判断access_token是否过期</span><br><span class="line">			let access_token_obj = &#123;</span><br><span class="line">				access_token: res.access_token,</span><br><span class="line">				requestTime: nowTime  </span><br><span class="line">			&#125;</span><br><span class="line">			uni.setStorageSync(&quot;access_token_obj&quot;, access_token_obj)</span><br><span class="line">			callback(res.access_token);</span><br><span class="line">		&#125; else &#123; //获取access_token失败</span><br><span class="line">			console.log(JSON.stringify(res));</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="4调用车牌识别api"><a class="markdownIt-Anchor" href="#4调用车牌识别api">#</a> 4. 调用车牌识别 API</h1>
+<p>先判断之前是否请求过 access_token，如果请求过再判断 access_token 是否过期。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * 开始进行文字识别，传入base64图片数据和回调函数</span><br><span class="line"> */</span><br><span class="line">function startOCR(imgData, callback) &#123;</span><br><span class="line">	console.log(&quot;开始识别...&quot;);</span><br><span class="line">	console.log(&quot;access_token缓存？&quot; + uni.getStorageSync(&quot;access_token_obj&quot;));</span><br><span class="line">	if (uni.getStorageSync(&quot;access_token_obj&quot;)) &#123; //如果access_token已存入缓存，表示请求过</span><br><span class="line">		let obj = uni.getStorageSync(&quot;access_token_obj&quot;);</span><br><span class="line">		let nowTime = new Date().getTime();</span><br><span class="line">		if ((nowTime - obj.requestTime) &gt;= 1000 * 3600 * 24 * 30) &#123; //如果上次请求时间在30天之前，则需要重新获取access_token</span><br><span class="line">			requestAccessToken(res =&gt; &#123;</span><br><span class="line">				recognition(res, imgData, callback);</span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; else &#123;</span><br><span class="line">			recognition(obj.access_token, imgData, callback);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; else &#123; //缓存中没有access_token</span><br><span class="line">		requestAccessToken(res =&gt; &#123;</span><br><span class="line">			recognition(res, imgData, callback);</span><br><span class="line">		&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//识别中...调用文字识别API,传入图片数据参数</span><br><span class="line">function recognition(access_token, imgData, callback) &#123;</span><br><span class="line">	let params = &#123;</span><br><span class="line">		access_token: access_token,</span><br><span class="line">		image: imgData</span><br><span class="line">	&#125;;</span><br><span class="line">	let header = &#123;</span><br><span class="line">		&apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;  //请求头设置成固定值</span><br><span class="line">	&#125;;</span><br><span class="line">	network.request(&apos;https://aip.baidubce.com/rest/2.0/ocr/v1/license_plate&apos;, params, header, &quot;POST&quot;, res =&gt; &#123;</span><br><span class="line">		callback(res);</span><br><span class="line">	&#125;, err =&gt; &#123;</span><br><span class="line">		uni.showToast(&#123;</span><br><span class="line">			title: &quot;请对准车牌重新拍照&quot;,</span><br><span class="line">			icon: &quot;none&quot;</span><br><span class="line">		&#125;)</span><br><span class="line">	&#125;, &quot;识别中...&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只要参数都没有问题，那么接下来就能得到返回结果，返回车牌信息（车牌号、车牌颜色等等）。<br>
+调用其他场景的图片识别 API 同理。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2019/08/15/手机端调用百度图片识别API/" data-id="ckdea8yxe000684vse1jkleuj" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/H5-APP/">H5 APP</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+        <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-微信小程序省市区三级联动优化版" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2019/07/16/微信小程序省市区三级联动优化版/">微信小程序省市区三级联动优化版</a>
+    </h2>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/07/16/微信小程序省市区三级联动优化版/" class="article-date">
+  <time datetime="2019-07-16T06:22:24.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>优化版的省市区选择器，更简化的 Js 数据，方便输出以及读取显示。js 地址：<span class="exturl" data-url="aHR0cHM6Ly9oZXhvLW9jZWFuLm9zcy1jbi1zaGFuZ2hhaS5hbGl5dW5jcy5jb20vcG9zdC9qcy9jaXR5RGF0YS5qcw==">城市数据 js</span>。</p>
+<p>页面组件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;picker mode=&quot;multiSelector&quot; bindchange=&quot;bindMultiPickerChange&quot; bindcolumnchange=&quot;bindMultiPickerColumnChange&quot; </span><br><span class="line">value=&quot;&#123;&#123;citiesIndex&#125;&#125;&quot; range=&quot;&#123;&#123;cityArray&#125;&#125;&quot; range-key=&quot;name&quot;&gt;</span><br><span class="line">  &lt;/picker&gt;</span><br></pre></td></tr></table></figure>
+<p>js 优化后无需放服务器请求，放本地即可。</p>
+<h1 id="1加载城市数据"><a class="markdownIt-Anchor" href="#1加载城市数据">#</a> 1. 加载城市数据</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var array = require(&apos;../../../utils/cityData.js&apos;).cityData;</span><br></pre></td></tr></table></figure>
+<h1 id="2选择器数据初始化"><a class="markdownIt-Anchor" href="#2选择器数据初始化">#</a> 2. 选择器数据初始化</h1>
+<p>初始化选择器数据，默认都选中第一项。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">let cityArray = [</span><br><span class="line">    [],</span><br><span class="line">    [],</span><br><span class="line">    []</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">for (let x in array[&quot;86&quot;]) &#123; //存入省</span><br><span class="line">    cityArray[0].push(&#123;</span><br><span class="line">    name: array[&quot;86&quot;][x],</span><br><span class="line">    code: x</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (let y in array[cityArray[0][0].code]) &#123; //存入市，默认关联第一个省</span><br><span class="line">    cityArray[1].push(&#123;</span><br><span class="line">        name: array[cityArray[0][0].code][y],</span><br><span class="line">        code: y</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (let z in array[cityArray[1][0].code]) &#123; //存入区，默认关联第一个省的第一个市</span><br><span class="line">    cityArray[2].push(&#123;</span><br><span class="line">        name: array[cityArray[1][0].code][z],</span><br><span class="line">        code: z</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">this.setData(&#123;</span><br><span class="line">    cityArray: cityArray</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="3列滚动事件"><a class="markdownIt-Anchor" href="#3列滚动事件">#</a> 3. 列滚动事件</h1>
+<p>滚动选择器的列时相应的数据变化，这是最重要的点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">//列滚动事件</span><br><span class="line">  bindMultiPickerColumnChange(e) &#123;</span><br><span class="line">    let selectedIndex = e.detail.value;</span><br><span class="line"></span><br><span class="line">    let cityArray = this.data.cityArray;</span><br><span class="line">    let list1 = []; //存放第二列数据，即市的列</span><br><span class="line">    let list2 = []; //存放第三列数据，即区的列</span><br><span class="line"></span><br><span class="line">    let citiesIndex = [];</span><br><span class="line"></span><br><span class="line">    let pcode = &apos;&apos;, scode = &apos;&apos;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    let provinceIndex = this.data.citiesIndex[0]; //选中的省索引</span><br><span class="line">    let cityIndex = this.data.citiesIndex[1]; //选中的市索引 </span><br><span class="line">    let areaIndex = this.data.citiesIndex[2]; //选中的区索引</span><br><span class="line"></span><br><span class="line">    switch (e.detail.column) &#123;</span><br><span class="line">      case 0: //滚动第一列</span><br><span class="line">        pcode = cityArray[0][selectedIndex].code;</span><br><span class="line">        for(let x in array[pcode])&#123;</span><br><span class="line">          list1.push(&#123;</span><br><span class="line">            name: array[pcode][x],</span><br><span class="line">            code: x</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        scode = list1[0].code;</span><br><span class="line">        for(let y in array[scode])&#123;</span><br><span class="line">          list2.push(&#123;</span><br><span class="line">            name: array[scode][y],</span><br><span class="line">            code: y</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        citiesIndex = [selectedIndex, 0, 0, 0];</span><br><span class="line">        break;</span><br><span class="line">      case 1: //滚动第二列</span><br><span class="line">        list1 = cityArray[1];</span><br><span class="line"></span><br><span class="line">        scode = list1[selectedIndex].code;</span><br><span class="line">        for(let x in array[scode])&#123;</span><br><span class="line">          list2.push(&#123;</span><br><span class="line">            name: array[scode][x],</span><br><span class="line">            code: x</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        citiesIndex = [provinceIndex, selectedIndex, 0, 0];</span><br><span class="line">        break;</span><br><span class="line">      case 2: //滚动第三列</span><br><span class="line">        list1 = cityArray[1];</span><br><span class="line">        list2 = cityArray[2];</span><br><span class="line"></span><br><span class="line">        citiesIndex = [provinceIndex, cityIndex, selectedIndex, 0];</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      [`cityArray[1]`]: list1, //重新赋值第二列数组，即联动了市</span><br><span class="line">      [`cityArray[2]`]: list2, //重新赋值第三列数组，即联动了区</span><br><span class="line">      citiesIndex: citiesIndex, //更新索引</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="4选择器变更事件"><a class="markdownIt-Anchor" href="#4选择器变更事件">#</a> 4. 选择器变更事件</h1>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//选择器选择事件</span><br><span class="line">  bindMultiPickerChange(e) &#123;</span><br><span class="line">    let cityIndex = e.detail.value; </span><br><span class="line">    let cityArray = this.data.cityArray;</span><br><span class="line"></span><br><span class="line">    let province = cityArray[0][cityIndex[0]].name;</span><br><span class="line">    let city = cityArray[1][cityIndex[1]].name;</span><br><span class="line">    let district = cityArray[2][cityIndex[2]].name;</span><br><span class="line">    //选择的地址编码</span><br><span class="line">    let areaCode = cityArray[2][cityIndex[2]].code;</span><br><span class="line">    //选择的地址文本</span><br><span class="line">    let selectedAddress = &quot;&quot;;</span><br><span class="line">   </span><br><span class="line">    selectedAddress = province + city + district;</span><br><span class="line"></span><br><span class="line">    this.setData(&#123;</span><br><span class="line">      region: selectedAddress,</span><br><span class="line">      areaCode: areaCode,</span><br><span class="line">      provinceCode: cityArray[0][cityIndex[0]].code,</span><br><span class="line">      cityCode: cityArray[1][cityIndex[1]].code</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+<h1 id="5根据传过来的值显示省市区"><a class="markdownIt-Anchor" href="#5根据传过来的值显示省市区">#</a> 5. 根据传过来的值显示省市区</h1>
+<p>修改初始化选择器方法，判断当修改地址时读取显示已选择的省市区。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">for (let x in array[&quot;86&quot;]) &#123; //存入省</span><br><span class="line">    cityArray[0].push(&#123;</span><br><span class="line">    name: array[&quot;86&quot;][x],</span><br><span class="line">    code: x</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if(this.data.address_id != &quot;&quot;)&#123; //编辑地址，根据传过来的地址文本和编码调整选择器</span><br><span class="line">    for (let y in array[provinceCode]) &#123;</span><br><span class="line">        cityArray[1].push(&#123;</span><br><span class="line">            name: array[provinceCode][y],</span><br><span class="line">            code: y</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for (let z in array[cityCode]) &#123;</span><br><span class="line">        cityArray[2].push(&#123;</span><br><span class="line">            name: array[cityCode][z],</span><br><span class="line">            code: z</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    for(let i = 0,len = cityArray[0].length;i&lt;len;i++)&#123;</span><br><span class="line">        if (cityArray[0][i].code == provinceCode) &#123;</span><br><span class="line">            provinceIndex = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let j = 0, len = cityArray[1].length; j &lt; len; j++) &#123;</span><br><span class="line">        if (cityArray[1][j].code == cityCode) &#123;</span><br><span class="line">            cityIndex = j;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    for (let k = 0, len = cityArray[2].length; k &lt; len; k++) &#123;</span><br><span class="line">        if (cityArray[2][k].code == areaCode) &#123;</span><br><span class="line">            districtIndex = k;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125; else &#123; //添加地址</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="效果"><a class="markdownIt-Anchor" href="#效果">#</a> 效果：</h2>
+<p><img data-src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/post/1558583329%281%29.png" alt="image.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2019/07/16/微信小程序省市区三级联动优化版/" data-id="ckdea8yx8000284vs4zqo9gw4" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+        <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-微信小程序长按数量自动加减" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h2 itemprop="name">
+      <a class="article-title" href="/2019/05/28/微信小程序长按数量自动加减/">微信小程序长按数量自动加减</a>
+    </h2>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/05/28/微信小程序长按数量自动加减/" class="article-date">
+  <time datetime="2019-05-28T08:18:29.000Z" itemprop="datePublished">2019-05-28</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>开发一个微信小程序，有购物车的功能，在测试加减购物车中商品数量时，发现点一下加一或减一太烦，于是添加了长按自动加减的功能。</p>
+<p>页面组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"minus"</span> <span class="attr">catchtouchstart</span>=<span class="string">'startMinus'</span> <span class="attr">catchtouchend</span>=<span class="string">'endMinus'</span> <span class="attr">data-index</span>=<span class="string">"&#123;&#123;index&#125;&#125;"</span> <span class="attr">data-goodIndex</span>=<span class="string">"&#123;&#123;goodIndex&#125;&#125;"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">text</span>&gt;</span> </span><br><span class="line">&#123;&#123;good.num&#125;&#125;     <span class="comment">&lt;!-- 商品数量 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"add"</span> <span class="attr">catchtouchstart</span>=<span class="string">'startAdd'</span> <span class="attr">catchtouchend</span>=<span class="string">'endAdd'</span> <span class="attr">data-index</span>=<span class="string">"&#123;&#123;index&#125;&#125;"</span> <span class="attr">data-goodIndex</span>=<span class="string">"&#123;&#123;goodIndex&#125;&#125;"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1监听触摸开始事件"><a class="markdownIt-Anchor" href="#1监听触摸开始事件">#</a> 1. 监听触摸开始事件</h3>
+<p>首先监听触摸开始事件 touchstart，记录触摸开始时间，时间后面有用。需要用到定时器，timer 用的是页面全局变量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按住加号不停地加</span></span><br><span class="line">startAdd(e)&#123;</span><br><span class="line">    startTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();  <span class="comment">//记录触摸开始时间</span></span><br><span class="line">    <span class="keyword">let</span> index = e.currentTarget.dataset.index;</span><br><span class="line">    <span class="keyword">let</span> goodIndex = e.currentTarget.dataset.goodindex;</span><br><span class="line">    timer = setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;  <span class="comment">//定义定时器</span></span><br><span class="line">        <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex].num++;</span><br><span class="line">        <span class="keyword">let</span> sumPrice = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>.data.cartList.map(<span class="function">(<span class="params">type, index</span>) =&gt;</span> &#123;</span><br><span class="line">        type.goodList.map(<span class="function">(<span class="params">good, index</span>) =&gt;</span> &#123;</span><br><span class="line">            count += good.num;  <span class="comment">//计算商品数量</span></span><br><span class="line">            <span class="keyword">if</span> (good.selected) &#123;  <span class="comment">//计算选中商品价格</span></span><br><span class="line">            sumPrice += good.price * good.num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">            [<span class="string">`cartList[<span class="subst">$&#123;index&#125;</span>].goodList[<span class="subst">$&#123;goodIndex&#125;</span>]`</span>]: <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex],  <span class="comment">//购物车列表内容局部刷新</span></span><br><span class="line">            goodSumPrice: sumPrice,</span><br><span class="line">            cartNum: count &gt; <span class="number">99</span> ? <span class="string">'99+'</span> : count</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2监听触摸结束事件"><a class="markdownIt-Anchor" href="#2监听触摸结束事件">#</a> 2. 监听触摸结束事件</h3>
+<p>触摸结束，则结束数量加减，清除定时器。记录结束时间，和开始时间比较，根据微信小程序官方文档定义：手指触摸后，超过 350ms 再离开为长按。反之则认为是点击，执行点击的逻辑，即数量加一。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结束加</span></span><br><span class="line">endAdd(e)&#123;</span><br><span class="line">    endTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(); <span class="comment">//记录结束时间</span></span><br><span class="line">    <span class="keyword">if</span>((endTime - startTime) &lt; <span class="number">350000</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.clickAdd(e);</span><br><span class="line">    &#125; </span><br><span class="line">    clearInterval(timer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击事件逻辑：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//点击加号</span></span><br><span class="line">clickAdd(e)&#123;</span><br><span class="line">  <span class="keyword">let</span> index = e.currentTarget.dataset.index;</span><br><span class="line">  <span class="keyword">let</span> goodIndex = e.currentTarget.dataset.goodindex;</span><br><span class="line">  <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex].num ++;</span><br><span class="line">  <span class="keyword">let</span> sumPrice = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">this</span>.data.cartList.map(<span class="function">(<span class="params">type, index</span>) =&gt;</span> &#123;</span><br><span class="line">    type.goodList.map(<span class="function">(<span class="params">good, index</span>) =&gt;</span> &#123;</span><br><span class="line">      count += good.num;</span><br><span class="line">      <span class="keyword">if</span> (good.selected) &#123;</span><br><span class="line">        sumPrice += good.price * good.num;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      [<span class="string">`cartList[<span class="subst">$&#123;index&#125;</span>].goodList[<span class="subst">$&#123;goodIndex&#125;</span>]`</span>]: <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex],</span><br><span class="line">      goodSumPrice: sumPrice,</span><br><span class="line">      cartNum: count&gt;<span class="number">99</span>?<span class="string">'99+'</span>:count</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之所以要判断是长按还是点击是因为在标签元素上定义了触摸开始事件后，tap 事件就不再触发，所以需要手动调用点击方法。</p>
+<p>减号同理，需要注意数量减到 0 时的操作，我的逻辑是长按数量减到一就停止，再点击减号则删除该商品。</p>
+<h3 id="效果图"><a class="markdownIt-Anchor" href="#效果图">#</a> 效果图</h3>
+<p><img data-src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/post/pj1sd-gfr7w.gif" alt="效果图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/" data-id="ckdea8yxi000884vstyq785be" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+
+  
+
+</article>
+
+
+
+      
+  </article>
+  
+  
+</section>
+</div>
+
+  <footer class="footer">
+  
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Flttx&#39;s Blog</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/hexo.svg" alt="Flttx&#39;s Blog"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+      <li class="nav-item">
+          <div class="totop" id="totop">
+    <i class="fe fe-rocket"></i>
+</div>
+      </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+</html>

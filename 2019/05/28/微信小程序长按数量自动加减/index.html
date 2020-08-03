@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    微信小程序长按数量自动加减 |
+    
+    Flttx&#39;s Blog</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  <!-- 目录内容 -->
+     
+<!-- 目录内容结束 -->
+
+
+<article id="post-微信小程序长按数量自动加减" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信小程序长按数量自动加减
+    </h1>
+  
+
+      </header>
+    
+
+    
+      <div class="article-meta">
+        <a href="/2019/05/28/微信小程序长按数量自动加减/" class="article-date">
+  <time datetime="2019-05-28T08:18:29.000Z" itemprop="datePublished">2019-05-28</time>
+</a>
+        
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+      </div>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+      
+
+      
+        <p>开发一个微信小程序，有购物车的功能，在测试加减购物车中商品数量时，发现点一下加一或减一太烦，于是添加了长按自动加减的功能。</p>
+<p>页面组件</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"minus"</span> <span class="attr">catchtouchstart</span>=<span class="string">'startMinus'</span> <span class="attr">catchtouchend</span>=<span class="string">'endMinus'</span> <span class="attr">data-index</span>=<span class="string">"&#123;&#123;index&#125;&#125;"</span> <span class="attr">data-goodIndex</span>=<span class="string">"&#123;&#123;goodIndex&#125;&#125;"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">text</span>&gt;</span> </span><br><span class="line">&#123;&#123;good.num&#125;&#125;     <span class="comment">&lt;!-- 商品数量 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">"add"</span> <span class="attr">catchtouchstart</span>=<span class="string">'startAdd'</span> <span class="attr">catchtouchend</span>=<span class="string">'endAdd'</span> <span class="attr">data-index</span>=<span class="string">"&#123;&#123;index&#125;&#125;"</span> <span class="attr">data-goodIndex</span>=<span class="string">"&#123;&#123;goodIndex&#125;&#125;"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="1监听触摸开始事件"><a class="markdownIt-Anchor" href="#1监听触摸开始事件">#</a> 1. 监听触摸开始事件</h3>
+<p>首先监听触摸开始事件 touchstart，记录触摸开始时间，时间后面有用。需要用到定时器，timer 用的是页面全局变量。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按住加号不停地加</span></span><br><span class="line">startAdd(e)&#123;</span><br><span class="line">    startTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();  <span class="comment">//记录触摸开始时间</span></span><br><span class="line">    <span class="keyword">let</span> index = e.currentTarget.dataset.index;</span><br><span class="line">    <span class="keyword">let</span> goodIndex = e.currentTarget.dataset.goodindex;</span><br><span class="line">    timer = setInterval(<span class="function"><span class="params">()</span>=&gt;</span>&#123;  <span class="comment">//定义定时器</span></span><br><span class="line">        <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex].num++;</span><br><span class="line">        <span class="keyword">let</span> sumPrice = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">this</span>.data.cartList.map(<span class="function">(<span class="params">type, index</span>) =&gt;</span> &#123;</span><br><span class="line">        type.goodList.map(<span class="function">(<span class="params">good, index</span>) =&gt;</span> &#123;</span><br><span class="line">            count += good.num;  <span class="comment">//计算商品数量</span></span><br><span class="line">            <span class="keyword">if</span> (good.selected) &#123;  <span class="comment">//计算选中商品价格</span></span><br><span class="line">            sumPrice += good.price * good.num;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">            [<span class="string">`cartList[<span class="subst">$&#123;index&#125;</span>].goodList[<span class="subst">$&#123;goodIndex&#125;</span>]`</span>]: <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex],  <span class="comment">//购物车列表内容局部刷新</span></span><br><span class="line">            goodSumPrice: sumPrice,</span><br><span class="line">            cartNum: count &gt; <span class="number">99</span> ? <span class="string">'99+'</span> : count</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;, <span class="number">100</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2监听触摸结束事件"><a class="markdownIt-Anchor" href="#2监听触摸结束事件">#</a> 2. 监听触摸结束事件</h3>
+<p>触摸结束，则结束数量加减，清除定时器。记录结束时间，和开始时间比较，根据微信小程序官方文档定义：手指触摸后，超过 350ms 再离开为长按。反之则认为是点击，执行点击的逻辑，即数量加一。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结束加</span></span><br><span class="line">endAdd(e)&#123;</span><br><span class="line">    endTime = <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(); <span class="comment">//记录结束时间</span></span><br><span class="line">    <span class="keyword">if</span>((endTime - startTime) &lt; <span class="number">350000</span>)&#123;</span><br><span class="line">        <span class="keyword">this</span>.clickAdd(e);</span><br><span class="line">    &#125; </span><br><span class="line">    clearInterval(timer);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>点击事件逻辑：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//点击加号</span></span><br><span class="line">clickAdd(e)&#123;</span><br><span class="line">  <span class="keyword">let</span> index = e.currentTarget.dataset.index;</span><br><span class="line">  <span class="keyword">let</span> goodIndex = e.currentTarget.dataset.goodindex;</span><br><span class="line">  <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex].num ++;</span><br><span class="line">  <span class="keyword">let</span> sumPrice = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">this</span>.data.cartList.map(<span class="function">(<span class="params">type, index</span>) =&gt;</span> &#123;</span><br><span class="line">    type.goodList.map(<span class="function">(<span class="params">good, index</span>) =&gt;</span> &#123;</span><br><span class="line">      count += good.num;</span><br><span class="line">      <span class="keyword">if</span> (good.selected) &#123;</span><br><span class="line">        sumPrice += good.price * good.num;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">this</span>.setData(&#123;</span><br><span class="line">      [<span class="string">`cartList[<span class="subst">$&#123;index&#125;</span>].goodList[<span class="subst">$&#123;goodIndex&#125;</span>]`</span>]: <span class="keyword">this</span>.data.cartList[index].goodList[goodIndex],</span><br><span class="line">      goodSumPrice: sumPrice,</span><br><span class="line">      cartNum: count&gt;<span class="number">99</span>?<span class="string">'99+'</span>:count</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>之所以要判断是长按还是点击是因为在标签元素上定义了触摸开始事件后，tap 事件就不再触发，所以需要手动调用点击方法。</p>
+<p>减号同理，需要注意数量减到 0 时的操作，我的逻辑是长按数量减到一就停止，再点击减号则删除该商品。</p>
+<h3 id="效果图"><a class="markdownIt-Anchor" href="#效果图">#</a> 效果图</h3>
+<p><img data-src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/post/pj1sd-gfr7w.gif" alt="效果图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://flttx.github.io/2019/05/28/微信小程序长按数量自动加减/" data-id="ckdea8yxi000884vstyq785be" class="article-share-link">Share</a>
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微信小程序/">微信小程序</a></li></ul>
+
+    </footer>
+
+  </div>
+
+  
+    
+  <nav class="article-nav">
+    
+      <a href="/2019/07/16/微信小程序省市区三级联动优化版/" class="article-nav-link">
+        <strong class="article-nav-caption">Newer posts</strong>
+        <div class="article-nav-title">
+          
+            微信小程序省市区三级联动优化版
+          
+        </div>
+      </a>
+    
+    
+  </nav>
+
+
+  
+
+  
+    
+  
+
+</article>
+
+
+
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Flttx&#39;s Blog</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="https://hexo-ocean.oss-cn-shanghai.aliyuncs.com/hexo.svg" alt="Flttx&#39;s Blog"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        Search
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+      <li class="nav-item">
+          <div class="totop" id="totop">
+    <i class="fe fe-rocket"></i>
+</div>
+      </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+  <script src="/js/search.js"></script>
+
+
+<script src="/js/ocean.js"></script>
+
+</body>
+</html>
